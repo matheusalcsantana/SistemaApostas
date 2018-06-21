@@ -31,4 +31,13 @@ public class Controller {
 		erropadrao = "Erro na consulta de cenario: ";
 		return this.cenarios.get(cenario).toString();
 	}
+	
+	public String exibirCenarios() {
+		String str = "";
+		for (Cenario cenario: this.cenarios.values()) {
+			str += cenario.toString();
+		}
+		return str;
+	}
+	
 }
