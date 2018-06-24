@@ -20,7 +20,8 @@ public class Cenario {
 	public String getEstado() {
 		return estado;
 	}
-
+	
+	
 	public void setEstado(String estado) {
 		this.estado = estado;
 	}
