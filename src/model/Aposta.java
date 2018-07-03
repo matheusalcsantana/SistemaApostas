@@ -1,17 +1,15 @@
 package model;
 
+
 public class Aposta {
 	
 	private int id_cenario;
 	private String nome;
 	private int valor;
 	private String previsao;
+	protected String msgpadrao;
 	
 	public Aposta(int id_cenario, String nome, int valor, String previsao) {
-		
-		if (!(previsao.equals("VAI ACONTECER") || previsao.equals("N VAI ACONTECER"))) {
-			throw new IllegalArgumentException("Previsão inserida não é válida!");
-		}
 		
 		this.id_cenario = id_cenario;
 		this.nome = nome;
@@ -42,6 +40,9 @@ public class Aposta {
 		}
 	}
 
+	public String getPrevisaoString() {
+		return this.previsao;
+	}
 
 	@Override
 	public String toString() {
